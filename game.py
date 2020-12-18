@@ -26,7 +26,8 @@ class Ball:
         self.canvas.move(self.id, 230, 461)
         start = [4, 3.8, 3.6, 3.4, 3.2, 3, 2.8, 2.6]
         random.shuffle(start)
-        
+
+
         self.x = start[0]
         self.y = -start[0]
         self.canvas.move(self.id, self.x, self.y)
@@ -37,7 +38,7 @@ class Ball:
         for brick_line in self.bricks:
             for brick in brick_line:
                 brick_pos = self.canvas.coords(brick.id)
-                
+
                 try:
                     if pos[2] >= brick_pos[0] and pos[0] <= brick_pos[2]:
                         if pos[3] >= brick_pos[1] and pos[1] <= brick_pos[3]:
@@ -49,9 +50,9 @@ class Ball:
                 except:
                     continue
         return False
-    
+
         
-    def paddle_hit(self, pos):
+def paddle_hit(self, pos):
         paddle_pos = self.canvas.coords(self.paddle.id)
         if pos[2] >= paddle_pos[0] and pos[0] <= paddle_pos[2]:
             if pos[3] >= paddle_pos[1] and pos[1] <= paddle_pos[3]:
