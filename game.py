@@ -26,8 +26,7 @@ class Ball:
         self.canvas.move(self.id, 230, 461)
         start = [4, 3.8, 3.6, 3.4, 3.2, 3, 2.8, 2.6]
         random.shuffle(start)
-
-
+        #print(start)
         self.x = start[0]
         self.y = -start[0]
         self.canvas.move(self.id, self.x, self.y)
@@ -38,7 +37,7 @@ class Ball:
         for brick_line in self.bricks:
             for brick in brick_line:
                 brick_pos = self.canvas.coords(brick.id)
-
+                #print(brick_pos)
                 try:
                     if pos[2] >= brick_pos[0] and pos[0] <= brick_pos[2]:
                         if pos[3] >= brick_pos[1] and pos[1] <= brick_pos[3]:
@@ -50,9 +49,9 @@ class Ball:
                 except:
                     continue
         return False
-
+    
         
-def paddle_hit(self, pos):
+    def paddle_hit(self, pos):
         paddle_pos = self.canvas.coords(self.paddle.id)
         if pos[2] >= paddle_pos[0] and pos[0] <= paddle_pos[2]:
             if pos[3] >= paddle_pos[1] and pos[1] <= paddle_pos[3]:
@@ -63,7 +62,7 @@ def paddle_hit(self, pos):
     def draw(self):
         self.canvas.move(self.id, self.x, self.y)
         pos = self.canvas.coords(self.id)
-        
+        #print(pos)
         start = [4, 3.8, 3.6, 3.4, 3.2, 3, 2.8, 2.6]
         random.shuffle(start)
         if self.brick_hit(pos):
@@ -95,7 +94,7 @@ class Paddle:
 
     def draw(self):
         pos = self.canvas.coords(self.id)
-        
+        #print(pos)
         if pos[0] + self.x <= 0:
             self.x = 0
         if pos[2] + self.x >= self.canvas_width:
@@ -191,3 +190,4 @@ root.bind_all("<Return>", start_game)
 canvas.create_text(250, 250, text="Press Enter to start Game!!", fill="red", font="Consolas 18")
 j=canvas.find_all()
 root.mainloop()
+
