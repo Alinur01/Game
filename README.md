@@ -4,7 +4,7 @@
 
 ###### Team members is Alinur Satylganov and Marat uulu Chyngyzkhan
 
-![game](https://user-images.githubusercontent.com/74015673/102711315-ce881900-42e2-11eb-9dd3-e7528a106d72.jpeg)
+![Ala-Too](https://user-images.githubusercontent.com/74015673/102720565-59870480-431f-11eb-9d4a-696aa61f34f3.jpeg)
 
 https://youtu.be/EvyWf_yYzgY
 
